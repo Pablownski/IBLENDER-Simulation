@@ -1,8 +1,8 @@
 public interface IBlender{
     void SpeedUp();
-    boolean isFull();
+    boolean IsFull();
     void Fill();
     void Empty();
     void SpeedDown();
-    int getSpeed();
+    int GetSpeed();
 }
