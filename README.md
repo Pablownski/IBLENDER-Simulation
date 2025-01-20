@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Este es el programa realizado para la Hoja de Trabajo #1 de la clase de Algoritmos y Estructuras de Datos.
 
 En este programa se implementan los siguientes requisitos:
@@ -12,7 +12,3 @@ En este programa se implementan los siguientes requisitos:
 
 A la vez, este programa fue creado con una interface "IBlender", la cual permite que la clase de Blender sea sustituída 
 por las clases que otros grupos crearon.
-=======
-# IBLENDER-Simulation
-oña
->>>>>>> 38088c56472b3a2697d7679fda71a857da7a40a9

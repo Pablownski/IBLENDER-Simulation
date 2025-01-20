@@ -5,7 +5,7 @@
  * Diego Gudiel 24451
  */
 
-public class Blender implements IBlender {
+public class Blender {
     public int speed;
     public boolean full;
     public final int MAX_SPEED = 10;
@@ -38,6 +38,4 @@ public class Blender implements IBlender {
             this.full = false;
         }
     }
-
-
 }
