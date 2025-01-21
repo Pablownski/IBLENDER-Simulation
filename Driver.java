@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class Driver{
     public static void main(String[] args) {
-
+        Blender blender = new Blender();
+        String alimento = "nada"; // Para almacenar el objeto que se llena la licuadora, por default 'nada'.
         boolean loop = true;
         while (loop){
-            Blender blender = new Blender();
             System.out.println("-".repeat(50));
             System.out.println("\t\tSimulación de licuadora");
             System.out.println("-".repeat(50));
@@ -40,7 +40,7 @@ public class Driver{
                             System.out.println("La licuadora ya esta llena.");
                         }else{
                             System.out.print("Ingrese con qué desea llenar la licuadora: \nR/ ");
-                            String alimento = input.nextLine();
+                            alimento = input.nextLine();
                             blender.Fill();
                             System.out.println("La licuadora se ha llenado exitosamente con: " + alimento);
                         }
@@ -48,7 +48,9 @@ public class Driver{
                     case 3:
                         if (blender.GetSpeed() == 0) {
                             System.out.println("La licuadora está apagada. Enciéndala primero (opción 1).");
-                        } else {
+                        } else if(blender.GetSpeed() == blender.getMaxSpeed()){
+                            System.out.println("La licuadora ya está corriendo a la máxima velocidad.");
+                        }else {
                             blender.SpeedUp();
                             System.out.println("La velocidad de la licuadora se ha incrementado a: " + blender.GetSpeed());
                         }
@@ -56,7 +58,9 @@ public class Driver{
                     case 4:
                         if (blender.GetSpeed() == 0) {
                             System.out.println("La licuadora ya está apagada.");
-                        } else {
+                        } else if (blender.GetSpeed() == 0){
+                            System.out.println("No se puede decrementar más la velocidad de la licuadora, pues ya está en 0.");
+                        }else {
                             blender.SpeedDown();
                             System.out.println("La velocidad de la licuadora se ha decrementado a: " + blender.GetSpeed());
                         }
@@ -66,9 +70,9 @@ public class Driver{
                         break;
                     case 6:
                         if(blender.IsFull()){
-                            System.out.println("La licuadora está llena.");
+                            System.out.println("La licuadora está llena con: " + alimento);
                         }else{
-                            System.out.println("La licuadora no está llena.");
+                            System.out.println("La licuadora está vacía.");
                         }
                         break;
                     case 7:

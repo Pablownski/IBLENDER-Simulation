@@ -6,9 +6,9 @@
  */
 
 public class Blender implements IBlender{
-    public int speed;
-    public boolean full;
-    public final int MAX_SPEED = 10;
+    private int speed;
+    private boolean full;
+    private final int MAX_SPEED = 10;
 
     public Blender(){
         this.speed = 0;
@@ -17,6 +17,10 @@ public class Blender implements IBlender{
 
     public int GetSpeed() {
         return this.speed;
+    }
+
+    public int getMaxSpeed(){
+        return this.MAX_SPEED;
     }
 
     public boolean IsFull(){
