@@ -9,6 +9,6 @@ En este programa se implementan los siguientes requisitos:
 5. Consulta en que velocidad esta la licuadora
 6. Consulta si la licuadora esta llena.
 7. Vaciar la licuadora
+8. Salir
 
-A la vez, este programa fue creado con una interface "IBlender", la cual permite que la clase de Blender sea sustituída 
-por las clases que otros grupos crearon.
+A la vez, este programa fue creado con una interface "IBlender", la cual permite que la clase de Blender sea sustituída por las clases que otros grupos crearon.
