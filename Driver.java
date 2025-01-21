@@ -26,7 +26,14 @@ public class Driver{
                 input.nextLine();
                 switch (opcion){ // TODO: Implementar las acciones de la licuadora en los casos 1, 3 y 4
                     case 1:
-
+                        if (!blender.isFull()) {
+                            System.out.println("La licuadora no puede encenderse porque no está llena.");
+                        } else if (blender.GetSpeed() == 0) {
+                            blender.SpeedUp();
+                            System.out.println("La licuadora se ha encendido. Velocidad actual: " + blender.GetSpeed());
+                        } else {
+                            System.out.println("La licuadora ya está encendida.");
+                        }
                         break;
                     case 2:
                         if (blender.isFull()){
@@ -39,10 +46,20 @@ public class Driver{
                         }
                         break;
                     case 3:
-                        
+                        if (blender.GetSpeed() == 0) {
+                            System.out.println("La licuadora está apagada. Enciéndala primero (opción 1).");
+                        } else {
+                            blender.SpeedUp();
+                            System.out.println("La velocidad de la licuadora se ha incrementado a: " + blender.GetSpeed());
+                        }
                         break;
                     case 4:
-                        
+                        if (blender.GetSpeed() == 0) {
+                            System.out.println("La licuadora ya está apagada.");
+                        } else {
+                            blender.SpeedDown();
+                            System.out.println("La velocidad de la licuadora se ha decrementado a: " + blender.GetSpeed());
+                        }
                         break;
                     case 5:
                         System.out.println("La licuadora actualmente está corriendo con velocidad: " + blender.GetSpeed());
