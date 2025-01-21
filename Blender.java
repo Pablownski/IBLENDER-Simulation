@@ -23,19 +23,27 @@ public class Blender {
         return this.full;
     }
 
-    public void Fill(){
-        if (this.full){
-            return;
-        }else{
-            this.full = true;
-        }
+    public void Fill() {
+        this.full = true;
     }
 
-    public void Empty(){
-        if (!this.full){
-            return;
-        }else{
-            this.full = false;
+    public void Empty() {
+        this.full = false;
+    }
+
+    public boolean SpeedUp() {
+        if (this.speed < MAX_SPEED) {
+            this.speed++;
+            return true; // Se incrementa
         }
+        return false; 
+    }
+
+    public boolean SpeedDown() {
+        if (this.speed > 0) {
+            this.speed--;
+            return true; // Baja velocidad
+        }
+        return false; 
     }
 }
