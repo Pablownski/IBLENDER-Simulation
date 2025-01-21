@@ -5,7 +5,7 @@
  * Diego Gudiel 24451
  */
 
-public class Blender {
+public class Blender implements IBlender{
     public int speed;
     public boolean full;
     public final int MAX_SPEED = 10;
@@ -19,7 +19,7 @@ public class Blender {
         return this.speed;
     }
 
-    public boolean isFull(){
+    public boolean IsFull(){
         return this.full;
     }
 
@@ -31,19 +31,15 @@ public class Blender {
         this.full = false;
     }
 
-    public boolean SpeedUp() {
+    public void SpeedUp() {
         if (this.speed < MAX_SPEED) {
             this.speed++;
-            return true; // Se incrementa
         }
-        return false; 
     }
 
-    public boolean SpeedDown() {
+    public void SpeedDown() {
         if (this.speed > 0) {
             this.speed--;
-            return true; // Baja velocidad
         }
-        return false; 
     }
 }

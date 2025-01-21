@@ -24,9 +24,9 @@ public class Driver{
                 System.out.print("Ingrese el número correspondiente a la opción que desee que la licuadora realice: \nR/ ");
                 int opcion = input.nextInt();
                 input.nextLine();
-                switch (opcion){ // TODO: Implementar las acciones de la licuadora en los casos 1, 3 y 4
+                switch (opcion){
                     case 1:
-                        if (!blender.isFull()) {
+                        if (!blender.IsFull()) {
                             System.out.println("La licuadora no puede encenderse porque no está llena.");
                         } else if (blender.GetSpeed() == 0) {
                             blender.SpeedUp();
@@ -36,7 +36,7 @@ public class Driver{
                         }
                         break;
                     case 2:
-                        if (blender.isFull()){
+                        if (blender.IsFull()){
                             System.out.println("La licuadora ya esta llena.");
                         }else{
                             System.out.print("Ingrese con qué desea llenar la licuadora: \nR/ ");
@@ -65,14 +65,14 @@ public class Driver{
                         System.out.println("La licuadora actualmente está corriendo con velocidad: " + blender.GetSpeed());
                         break;
                     case 6:
-                        if(blender.isFull()){
+                        if(blender.IsFull()){
                             System.out.println("La licuadora está llena.");
                         }else{
                             System.out.println("La licuadora no está llena.");
                         }
                         break;
                     case 7:
-                        if(!blender.isFull()){
+                        if(!blender.IsFull()){
                             System.out.println("La licuadora ya está vacía.");
                         }else{
                             blender.Empty();
